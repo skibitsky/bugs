@@ -7,12 +7,20 @@
     "build": "vite build"
   },
   "dependencies": {
-    "@reown/appkit": "1.7.17",
-    "@reown/appkit-adapter-solana": "^1.7.17",
-    "@reown/appkit-adapter-wagmi": "1.7.17",
+    "@reown/appkit": "1.8.1",
+    "@reown/appkit-adapter-solana": "1.8.1",
+    "@reown/appkit-adapter-wagmi": "1.8.1",
     "@wagmi/core": "^2.16.3",
     "viem": "^2.22.8",
-    "wagmi": "^2.13.3"
+    "wagmi": "0.0.0-canary-20250822173324"
+  },
+  "overrides": {
+    "@wagmi/connectors": "0.0.0-canary-20250822173324",
+    "@wagmi/core": "0.0.0-canary-20250822173324"
+  },
+  "resolutions": {
+    "@wagmi/connectors": "0.0.0-canary-20250822173324",
+    "@wagmi/core": "0.0.0-canary-20250822173324"
   },
   "devDependencies": {
     "vite": "6.2.0"

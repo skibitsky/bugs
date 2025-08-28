@@ -1,6 +1,7 @@
 import { createAppKit } from "@reown/appkit";
 import { WagmiAdapter } from "@reown/appkit-adapter-wagmi";
 import { SolanaAdapter } from "@reown/appkit-adapter-solana";
+import { createStorage } from "wagmi";
 import * as chains from "@reown/appkit/networks";
 
 const projectId = import.meta.env.VITE_PROJECT_ID; // this is a public projectId only to use on localhost
@@ -17,6 +18,7 @@ console.log("[App] Networks:", networks);
 export const wagmiAdapter = new WagmiAdapter({
   projectId,
   networks,
+  storage: createStorage({ key: "appKit-1.8.1" }),
 });
 
 export const solanaAdapter = new SolanaAdapter();
