@@ -20,11 +20,15 @@ document
 
 document
   .getElementById("open-connect-modal")
-  ?.addEventListener("click", () => appKit.open());
+  ?.addEventListener("click", async () => {
+    await wagmiAdapter.wagmiConfig._internal.revalidate();
+    await appKit.open();
+  });
 
 document.getElementById("disconnect")?.addEventListener("click", async () => {
   console.log("Disconnecting...");
-  await appKit.disconnect();
+  await appKit.disconnect("eip155");
+  await appKit.disconnect("solana");
   console.log("Disconnected");
 });
 
