@@ -1,0 +1,21 @@
+{
+  "name": "vanilljs-wagmi",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite --port 3011",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@reown/appkit": "1.8.10-wallet-button-fix.0",
+    "@reown/appkit-adapter-solana": "1.8.10-wallet-button-fix.0",
+    "@reown/appkit-adapter-wagmi": "1.8.10-wallet-button-fix.0",
+    "@reown/appkit-wallet-button": "1.8.10-wallet-button-fix.0",
+    "@wagmi/core": "2.22.0",
+    "viem": "^2.21.19",
+    "wagmi": "2.17.5"
+  },
+  "devDependencies": {
+    "vite": "6.2.0"
+  }
+}
